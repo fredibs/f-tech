@@ -1,0 +1,13 @@
+# Configurações sensíveis
+config.js
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependências (se usar)
+node_modules/
