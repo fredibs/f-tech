@@ -1,7 +1,7 @@
-# Configurações sensíveis
+# Configurações sensíveis.
 config.js
 
-# Arquivos do sistema
+# Arquivos do sistema.
 .DS_Store
 Thumbs.db
 
@@ -9,5 +9,5 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Dependências (se usar)
+# Dependências (se usar).
 node_modules/

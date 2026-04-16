@@ -1,6 +1,6 @@
-# F-Tech Solutions - Website
+# F-Tech Solutions - Website.
 
-## Configuração de Segurança
+## Configuração de Segurança.
 
 ### Como configurar dados sensíveis:
 

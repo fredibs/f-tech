@@ -1,5 +1,5 @@
 // CONFIGURAÇÕES SENSÍVEIS - MODELO
-// Copie este arquivo para config.js e preencha com seus dados
+// Copie este arquivo para config.js e preencha com seus dados.
 const CONFIG = {
     // Chave do Web3Forms (obtenha em https://web3forms.com)
     WEB3FORMS_KEY: "SUA_CHAVE_AQUI",
