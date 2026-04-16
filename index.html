@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>F-Tech | Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e2e5;
+            color: #1e293b;
+            line-height: 1.2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 4.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #334155;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Botões padrão */
+        .btn-primary {
+            display: inline-block;
+            background: #2563eb;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #2563eb;
+            color: #2563eb;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+
+        /* Botão WhatsApp flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20b859;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            padding: 60px 0 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #0f172a, #2563eb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 32px;
+            max-width: 90%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 280px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 420px;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+        }
+
+        /* Seção de Serviços */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #475569;
+            max-width: 680px;
+            margin: 0 auto 48px auto;
+            font-size: 1.1rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgb(213, 220, 230);
+            border-radius: 28px;
+            padding: 32px 24px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            transition: all 0.25s ease;
+            border: 1px solid #fefeff;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+            border-color: #cbd5e1;
+        }
+
+        .card i {
+            font-size: 3.0rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #4b5563;
+        }
+
+        /* Depoimento */
+        .testimonial {
+            background: linear-gradient(120deg, #c4cfdb, #d2d9e0);
+            border-radius: 48px;
+            padding: 48px 40px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 12px rgb(255, 255, 255);
+        }
+
+        .testimonial i.fa-quote-left {
+            font-size: 2.5rem;
+            color: #7689a3;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        .testimonial p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1e293b;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.4;
+        }
+
+        .testimonial h4 {
+            font-weight: 700;
+            margin-top: 16px;
+            color: #2563eb;
+        }
+
+        .stars {
+            color: #d79a01;
+            margin-bottom: 12px;
+            letter-spacing: 6px;
+            font-size: 1.5rem;
+        }
+
+        /* Formulário de contato */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgb(227, 231, 240);
+            border-radius: 32px;
+            padding: 32px 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            border: 1px solid #eef2ff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 60px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(225, 225, 227, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            max-width: 260px;
+            margin: 0 auto;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .feedback-message {
+            text-align: center;
+            margin-top: 16px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta {
+            background: #0f172a;
+            border-radius: 48px;
+            padding: 64px 48px;
+            text-align: center;
+            color: white;
+            margin: 40px 0 20px;
+        }
+
+        .cta h2 {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.5rem;
+            margin-bottom: 32px;
+            color: #cbd5e1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Rodapé */
+        footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 48px 0 32px;
+            margin-top: 40px;
+            text-align: center;
+            color: #5b6e8c;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #2563eb;
+        }
+
+        .social-icons {
+            margin: 24px 0;
+        }
+
+        .social-icons a {
+            color: #5b6e8c;
+            font-size: 2.0rem;
+            margin: 0 12px;
+            transition: color 0.2s;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #2427fa;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .hero-content p {
+                max-width: 100%;
+            }
+            .hero {
+                padding: 30px 0;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .cta {
+                padding: 40px 24px;
+            }
+            .testimonial p {
+                font-size: 1.1rem;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">F-Tech Solutions<span style="color:#2563eb;">  </span></div>
+        <ul class="nav-links">
+            <!-- Links removidos ou mantidos conforme necessário -->
+        </ul>
+        <div>
+            <a href="#contato" class="btn-primary" style="padding: 8px 22px;">Área do Cliente</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Transforme ideias em soluções digitais ou de hardware</h1>
+                <p>Estratégia, design e tecnologia para impulsionar o seu negócio no ambiente digital. Criamos soluções e experiências personalizadas que geram resultados reais.</p>
+                <div class="hero-buttons">
+                    <a href="#servicos" class="btn-primary">Nossos serviços</a>
+                    <a href="#contato" class="btn-primary btn-outline">Fale com um expert</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="imagens/a.png" alt="F-Tech Solutions">
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section">
+        <h2 class="section-title">O que fazemos por você</h2>
+        <p class="section-sub">Soluções completas para construir sua presença digital com autoridade e performance.</p>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Cloud & Infra</h3>
+                <p>Hospedagem escalável, segurança e suporte contínuo para seu negócio sempre no ar.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Websites & Apps</h3>
+                <p>Desenvolvimento responsivo, rápido e focado na conversão. Tecnologia de ponta para web e mobile.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Marketing Digital</h3>
+                <p>Estratégias de SEO, tráfego pago e conteúdo que colocam sua marca no topo dos resultados.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-palette"></i>
+                <h3>UI/UX Design</h3>
+                <p>Design centrado no usuário, interfaces intuitivas e experiências memoráveis para seus clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimento -->
+    <div class="testimonial">
+        <i class="fas fa-quote-left"></i>
+        <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>"A F-Tec Solutions transformou completamente nossa empresa e presença online. Em apenas 3 meses, aumentamos nossa performance geral em 40% e o site ficou incrível! Equipe atenciosa e muito profissional."</p>
+        <h4>— Fabricio Matos, CEO da CF3W</h4>
+    </div>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="section" style="padding-top: 20px;">
+        <h2 class="section-title">Vamos criar algo incrível?</h2>
+        <p class="section-sub">Preencha o formulário abaixo e retornaremos o contato por e-mail em até 24 horas.</p>
+        
+        <div class="form-container">
+            <form id="emailForm">
+                <div class="form-group">
+                    <label for="nome"><i class="fas fa-user"></i> Nome completo *</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail *</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+                </div>
+                <div class="form-group">
+                    <label for="telefone"><i class="fas fa-phone"></i> Telefone (opcional)</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(38) 9 9999-9999">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem"><i class="fas fa-comment"></i> Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Conte sobre seu projeto, dúvida ou orçamento..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+                <div id="formFeedback" class="feedback-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <div class="cta">
+        <h2>Pronto para decolar?</h2>
+        <p>Agende uma conversa estratégica sem compromisso. Vamos mostrar na prática como potencializar seus resultados através da tecnologia.</p>
+        <a href="#" id="whatsappCTAButton" class="btn-primary" style="background: white; color:#0f172a;">Quero uma consultoria gratuita agora →</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-youtube" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 F-Tech Solutions.<br>Todos os direitos reservados.</p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">Feito com <i class="fas fa-heart" style="color:#ef4444;"></i> para impulsionar negócios.</p>
+    </footer>
+</div>
+
+<!-- Botão WhatsApp Flutuante -->
+<a href="#" id="whatsappFloatButton" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Arquivo de configuração externo (SENSÍVEL) -->
+<script src="config.js"></script>
+
+<script>
+    (function() {
+        // Verificar se as configurações foram carregadas
+        if (typeof CONFIG === 'undefined') {
+            console.error('Arquivo de configuração não carregado!');
+            const feedbackDiv = document.getElementById('formFeedback');
+            if (feedbackDiv) {
+                feedbackDiv.innerHTML = '<span style="color:#dc2626;"><i class="fas fa-exclamation-triangle"></i> Erro de configuração. Contate o administrador.</span>';
+            }
+            return;
+        }
+        
+        const form = document.getElementById('emailForm');
+        const feedbackDiv = document.getElementById('formFeedback');
+        
+        // Usar a chave do arquivo de configuração
+        const ACCESS_KEY = CONFIG.WEB3FORMS_KEY;
+        
+        // Configurar links do WhatsApp
+        const setupWhatsAppLinks = () => {
+            const whatsappNumber = CONFIG.WHATSAPP_NUMBER;
+            const whatsappMessage = CONFIG.WHATSAPP_MESSAGE;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Botão flutuante
+            const floatBtn = document.getElementById('whatsappFloatButton');
+            if (floatBtn) {
+                floatBtn.href = whatsappUrl;
+            }
+            
+            // Botão CTA
+            const ctaBtn = document.getElementById('whatsappCTAButton');
+            if (ctaBtn) {
+                ctaBtn.href = whatsappUrl;
+            }
+        };
+        
+        // Configurar links sociais
+        const setupSocialLinks = () => {
+            const socials = {
+                'social-instagram': CONFIG.SOCIAL_INSTAGRAM,
+                'social-linkedin': CONFIG.SOCIAL_LINKEDIN,
+                'social-facebook': CONFIG.SOCIAL_FACEBOOK,
+                'social-twitter': CONFIG.SOCIAL_TWITTER,
+                'social-youtube': CONFIG.SOCIAL_YOUTUBE
+            };
+            
+            for (const [className, url] of Object.entries(socials)) {
+                const element = document.querySelector(`.${className}`);
+                if (element && url) {
+                    element.href = url;
+                }
+            }
+        };
+        
+        // Configurar formulário
+        if (form && ACCESS_KEY) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const nome = document.getElementById('nome').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const telefone = document.getElementById('telefone').value.trim();
+                const mensagem = document.getElementById('mensagem').value.trim();
+                
+                if (!nome || !email || !mensagem) {
+                    feedbackDiv.innerHTML = '<span style="color:#dc2626;"><i class="fas fa-exclamation-circle"></i> Por favor, preencha todos os campos obrigatórios (*).</span>';
+                    return;
+                }
+                
+                if (!email.includes('@') || !email.includes('.')) {
+                    feedbackDiv.innerHTML = '<span style="color:#dc2626;"><i class="fas fa-envelope"></i> Insira um e-mail válido.</span>';
+                    return;
+                }
+                
+                feedbackDiv.innerHTML = '<span style="color:#2563eb;"><i class="fas fa-spinner fa-pulse"></i> Enviando mensagem...</span>';
+                
+                const formData = new FormData();
+                formData.append('access_key', ACCESS_KEY);
+                formData.append('name', nome);
+                formData.append('email', email);
+                formData.append('phone', telefone || 'Não informado');
+                formData.append('message', mensagem);
+                formData.append('subject', `Novo contato do portfólio - ${nome}`);
+                
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        feedbackDiv.innerHTML = '<span style="color:#16a34a;"><i class="fas fa-check-circle"></i> ✅ Mensagem enviada com sucesso! Responderemos em breve.</span>';
+                        form.reset();
+                        setTimeout(() => {
+                            feedbackDiv.innerHTML = '';
+                        }, 5000);
+                    } else {
+                        throw new Error(result.message || 'Erro no envio');
+                    }
+                } catch (error) {
+                    console.error('Erro:', error);
+                    feedbackDiv.innerHTML = '<span style="color:#dc2626;"><i class="fas fa-exclamation-triangle"></i> ❌ Erro ao enviar. Por favor, tente novamente ou use o WhatsApp.</span>';
+                }
+            });
+        }
+        
+        // Scroll suave
+        const linksInternos = document.querySelectorAll('a[href^="#"]');
+        linksInternos.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const hash = this.getAttribute('href');
+                if (hash === "#" || hash === "") return;
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Inicializar links
+        setupWhatsAppLinks();
+        setupSocialLinks();
+    })();
+</script>
+
+</body>
+</html>
