@@ -1,14 +1,14 @@
 // CONFIGURAÇÕES SENSÍVEIS - NÃO INCLUIR NO REPOSITÓRIO PÚBLICO
 const CONFIG = {
     // Chave do Web3Forms (obtenha em https://web3forms.com)
-    WEB3FORMS_KEY: "7d2fe79d-bcc4-4597-abab-8b1506b75e44",
-    
+    WEB3FORMS_KEY: "b7a47b7d-f92a-4a43-a774-69627b012640",
+
     // Número do WhatsApp (apenas números, sem espaços ou caracteres especiais)
     WHATSAPP_NUMBER: "38997389585",
-    
+
     // Mensagem padrão do WhatsApp
     WHATSAPP_MESSAGE: "Olá! Gostaria de mais informações sobre os serviços da F-Tech Solutions.",
-    
+
     // Links das redes sociais
     SOCIAL_INSTAGRAM: "https://www.instagram.com/ftechlab",
     SOCIAL_LINKEDIN: "https://www.linkedin.com/in/frederico-gonçalves-carneiro-matos-330a4896",
