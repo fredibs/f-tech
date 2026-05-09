@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Política de Privacidade | F-Tech Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.ico/32.svg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e2e5;
+            color: #1e293b;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #334155;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-voltar:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* Conteúdo principal */
+        .privacy-content {
+            background: #f8fafc;
+            border-radius: 32px;
+            padding: 48px;
+            margin: 40px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .privacy-header .data-atualizacao {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .privacy-section {
+            margin-bottom: 32px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            padding-left: 16px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 20px 0 12px 0;
+        }
+
+        .privacy-section p {
+            color: #334155;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 12px 0 12px 32px;
+            color: #334155;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+
+        .privacy-section strong {
+            color: #2563eb;
+        }
+
+        .highlight-box {
+            background: #e0f2fe;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .lgpd-badge {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        .contact-info {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 24px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info i {
+            color: #2563eb;
+            width: 24px;
+            margin-right: 8px;
+        }
+
+        .cookie-note {
+            background: #fef9e3;
+            border: 1px solid #fde047;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .cookie-note i {
+            color: #eab308;
+            margin-right: 8px;
+        }
+
+        /* Rodapé */
+        footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 48px 0 32px;
+            margin-top: 40px;
+            text-align: center;
+            color: #5b6e8c;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #2563eb;
+        }
+
+        .social-icons {
+            margin: 24px 0;
+        }
+
+        .social-icons a {
+            color: #5b6e8c;
+            font-size: 2.0rem;
+            margin: 0 12px;
+            transition: color 0.2s;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #2563eb;
+        }
+
+        /* Botão WhatsApp flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20b859;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .privacy-content {
+                padding: 24px;
+            }
+            .privacy-header h1 {
+                font-size: 1.8rem;
+            }
+            .privacy-section h2 {
+                font-size: 1.3rem;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navegação -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">F-Tech Solutions</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Início</a></li>
+            <li><a href="index.html#servicos">Serviços</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+        <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar para o site</a>
+    </nav>
+
+    <!-- Conteúdo da Política de Privacidade -->
+    <div class="privacy-content">
+        <div class="privacy-header">
+            <h1><i class="fas fa-shield-alt"></i> Política de Privacidade <span class="lgpd-badge">LGPD Compliance</span></h1>
+            <p class="data-atualizacao">Última atualização: 08 de maio de 2026</p>
+            <p class="data-atualizacao">Versão: 1.0 | Em conformidade com a Lei nº 13.709/2018</p>
+        </div>
+
+        <!-- 1. Introdução -->
+        <div class="privacy-section">
+            <h2>1. Introdução</h2>
+            <p>A <strong>F-Tech Solutions</strong> valoriza a privacidade de seus usuários e clientes. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>.</p>
+            <p>Ao acessar nosso site, utilizar nossos serviços ou fornecer qualquer informação pessoal, você concorda com os termos descritos nesta política. Recomendamos a leitura atenta deste documento.</p>
+        </div>
+
+        <!-- 2. Dados Coletados -->
+        <div class="privacy-section">
+            <h2>2. Dados Coletados</h2>
+            <p>Coletamos apenas os dados necessários para a prestação de nossos serviços e melhoria da experiência do usuário, tais como:</p>
+            <ul>
+                <li><strong>Dados de Identificação:</strong> Nome, CPF/CNPJ, e-mail e telefone.</li>
+                <li><strong>Dados de Navegação:</strong> Endereço IP, cookies e registros de acesso.</li>
+                <li><strong>Dados de Pagamento:</strong> Informações de faturamento e transações (quando aplicável).</li>
+            </ul>
+            <div class="cookie-note">
+                <i class="fas fa-cookie-bite"></i> <strong>Sobre Cookies:</strong> Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos (como Google Analytics) para melhorar sua experiência. Você pode gerenciar suas preferências de cookies nas configurações do seu navegador.
+            </div>
+        </div>
+
+        <!-- 3. Finalidade do Tratamento -->
+        <div class="privacy-section">
+            <h2>3. Finalidade do Tratamento</h2>
+            <p>O tratamento de dados pessoais pela <strong>F-Tech Solutions</strong> tem as seguintes finalidades:</p>
+            <ul>
+                <li>✓ Execução de contratos ou procedimentos preliminares relacionados aos serviços contratados;</li>
+                <li>✓ Cumprimento de obrigações legais ou regulatórias;</li>
+                <li>✓ Envio de comunicações técnicas ou comerciais (mediante consentimento prévio);</li>
+                <li>✓ Garantia da segurança e prevenção a fraudes em nossos sistemas;</li>
+                <li>✓ Melhoria contínua de nossos produtos, serviços e experiência do usuário.</li>
+            </ul>
+        </div>
+
+        <!-- 4. Compartilhamento de Dados -->
+        <div class="privacy-section">
+            <h2>4. Compartilhamento de Dados</h2>
+            <p><strong>Não comercializamos dados pessoais.</strong> O compartilhamento ocorre apenas nas seguintes situações:</p>
+            <ul>
+                <li>Com parceiros essenciais para a operação (como meios de pagamento, provedores de hospedagem e serviços de nuvem), que estão obrigados a manter a confidencialidade dos dados;</li>
+                <li>Por determinação judicial ou requisição de autoridades competentes;</li>
+                <li>Para proteção dos direitos da F-Tech Solutions ou de terceiros, sempre dentro dos limites da lei.</li>
+            </ul>
+        </div>
+
+        <!-- 5. Direitos do Titular -->
+        <div class="privacy-section">
+            <h2>5. Direitos do Titular</h2>
+            <p>Em conformidade com o <strong>Art. 18 da LGPD</strong>, você tem os seguintes direitos:</p>
+            <ol>
+                <li>Confirmar a existência de tratamento de seus dados;</li>
+                <li>Acessar seus dados pessoais;</li>
+                <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+                <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade;</li>
+                <li>Solicitar a portabilidade dos dados a outro fornecedor de serviço ou produto;</li>
+                <li>Solicitar a eliminação dos dados pessoais tratados com seu consentimento;</li>
+                <li>Revogar o consentimento a qualquer momento;</li>
+                <li>Opor-se a tratamento realizado em desacordo com a lei.</li>
+            </ol>
+            <div class="highlight-box">
+                <p><i class="fas fa-gavel"></i> <strong>Como exercer seus direitos:</strong> Para solicitações relacionadas aos seus dados pessoais, entre em contato com nosso Encarregado de Proteção de Dados através do e-mail informado no item 8. Responderemos em até <strong>15 (quinze) dias úteis</strong>, conforme estabelecido pela LGPD.</p>
+            </div>
+        </div>
+
+        <!-- 6. Segurança da Informação -->
+        <div class="privacy-section">
+            <h2>6. Segurança da Informação</h2>
+            <p>Adotamos medidas técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado.</p>
+            <p>Entre as medidas adotadas estão: criptografia de dados sensíveis, controles de acesso restritos, monitoramento de vulnerabilidades e treinamento periódico de nossa equipe.</p>
+            <p><strong>Importante:</strong> Embora utilizemos as melhores práticas de segurança, nenhum sistema é 100% invulnerável. Em caso de incidente de segurança, notificaremos os usuários afetados e a ANPD conforme exigido por lei.</p>
+        </div>
+
+        <!-- 7. Retenção de Dados -->
+        <div class="privacy-section">
+            <h2>7. Retenção de Dados</h2>
+            <p>Os dados pessoais serão conservados apenas pelo período necessário para cumprir as finalidades para as quais foram coletados, incluindo para fins de cumprimento de obrigações legais, contratuais ou regulatórias.</p>
+            <p>Após o término do período de retenção, os dados serão anonimizados ou eliminados de forma segura, respeitando os prazos legais aplicáveis (como o Código de Defesa do Consumidor e legislação fiscal).</p>
+        </div>
+
+        <!-- 8. Contato (Encarregado de Dados) -->
+        <div class="privacy-section">
+            <h2>8. Contato - Encarregado de Proteção de Dados (DPO)</h2>
+            <p>Para exercer seus direitos, tirar dúvidas ou fazer reclamações sobre esta Política de Privacidade, entre em contato com nosso <strong>Encarregado de Proteção de Dados</strong>:</p>
+            <div class="contact-info">
+                <p><i class="fas fa-user-tie"></i> <strong>Encarregado (DPO):</strong> Comitê de Privacidade F-Tech Solutions</p>
+                <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> <a href="mailto:ftechsolutions@zohomail.com">ftechsolutions@zohomail.com</a></p>
+                <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> Não temos esse serviço disponível no momento.</p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> (38) 9 9738-9585</p>
+                <!-- <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço para correspondência:</strong> Rua Tecnologia, 1000 - Sala 42, Belo Horizonte/MG - CEP: 30123-456</p> -->
+                <p><small><i class="fas fa-clock"></i> Horário de atendimento: Segunda a Sexta, das 9h às 17h</small></p>
+            </div>
+        </div>
+
+        <!-- 9. Disposições Gerais -->
+        <div class="privacy-section">
+            <h2>9. Disposições Gerais e Atualizações</h2>
+            <p>A F-Tech Solutions pode atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por exigências legais. A versão mais recente estará sempre disponível em nosso site, com a data de atualização informada no topo da página.</p>
+            <p>Recomendamos que você revise esta página regularmente. O uso continuado de nossos serviços após quaisquer alterações constitui aceitação da política atualizada.</p>
+            <!-- <p>Em caso de dúvidas não esclarecidas por nosso Encarregado, você também pode registrar sua reclamação junto à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>.</p> -->
+        </div>
+
+        <div class="highlight-box">
+            <p><i class="fas fa-balance-scale"></i> <strong>Base Legal:</strong> Esta Política de Privacidade foi elaborada com base na Lei nº 13.709/2018 (LGPD) e segue as diretrizes da Autoridade Nacional de Proteção de Dados (ANPD).</p>
+            <!-- <p style="margin-top: 12px; font-size: 0.85rem;"><i class="fas fa-exclamation-triangle"></i> <strong>Importante:</strong> Este documento é um modelo padrão. Caso sua empresa realize tratamento de <strong>dados sensíveis</strong> (saúde, biometria, origem racial, convicção religiosa, orientação sexual) ou <strong>dados de menores de idade</strong>, adaptações adicionais são necessárias. Recomenda-se a revisão por um advogado especializado em Direito Digital.</p> -->
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#home">Início</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="politica-privacidade.html">Política de Privacidade</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-youtube" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 F-Tech Solutions. Todos os direitos reservados.</p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">Feito com <i class="fas fa-heart" style="color:#ef4444;"></i> em conformidade com a LGPD.</p>
+    </footer>
+</div>
+
+<!-- Botão WhatsApp Flutuante -->
+<a href="#" id="whatsappFloatButton" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="config.js"></script>
+<script>
+    (function() {
+        // Configurar links do WhatsApp usando o config.js
+        if (typeof CONFIG !== 'undefined' && CONFIG.WHATSAPP_NUMBER) {
+            const whatsappNumber = CONFIG.WHATSAPP_NUMBER;
+            const whatsappMessage = CONFIG.WHATSAPP_MESSAGE || "Olá! Gostaria de mais informações sobre a F-Tech Solutions.";
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            const floatBtn = document.getElementById('whatsappFloatButton');
+            if (floatBtn) floatBtn.href = whatsappUrl;
+        }
+        
+        // Configurar links sociais
+        if (typeof CONFIG !== 'undefined') {
+            const socials = {
+                'social-instagram': CONFIG.SOCIAL_INSTAGRAM,
+                'social-linkedin': CONFIG.SOCIAL_LINKEDIN,
+                'social-facebook': CONFIG.SOCIAL_FACEBOOK,
+                'social-twitter': CONFIG.SOCIAL_TWITTER,
+                'social-youtube': CONFIG.SOCIAL_YOUTUBE
+            };
+            
+            for (const [className, url] of Object.entries(socials)) {
+                const element = document.querySelector(`.${className}`);
+                if (element && url && url !== '#') {
+                    element.href = url;
+                }
+            }
+        }
+    })();
+</script>
+
+</body>
+</html>
