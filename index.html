@@ -251,6 +251,86 @@
 
         .card p {
             color: #4b5563;
+            line-height: 1.4;
+        }
+
+        /* Estilos para Missão e Visão */
+        .missao-visao-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .missao-card, .visao-card {
+            flex: 1;
+            min-width: 280px;
+            background: linear-gradient(135deg, #f8fafc, #eef2ff);
+            border-radius: 28px;
+            padding: 36px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .missao-card:hover, .visao-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .missao-card i, .visao-card i {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 24px;
+        }
+
+        .missao-card h3, .visao-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+
+        .missao-card p, .visao-card p {
+            color: #334155;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Seção de Valores */
+        .valores-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .valores-icon {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .valores-icon i {
+            font-size: 2.2rem;
+            color: white;
+            margin: 0;
+        }
+
+        .valores-header h3 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .valores-header p {
+            color: #475569;
+            font-size: 1.1rem;
         }
 
         /* Depoimento */
@@ -363,12 +443,12 @@
         }
 
         .cta h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 16px;
         }
 
         .cta p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 32px;
             color: #cbd5e1;
             max-width: 900px;
@@ -417,7 +497,7 @@
         }
 
         .social-icons a:hover {
-            color: #2427fa;
+            color: #2563eb;
         }
 
         /* Responsividade */
@@ -440,6 +520,9 @@
             .cta {
                 padding: 40px 24px;
             }
+            .cta h2 {
+                font-size: 2rem;
+            }
             .testimonial p {
                 font-size: 1.1rem;
             }
@@ -450,6 +533,12 @@
                 bottom: 20px;
                 right: 20px;
             }
+            .missao-card h3, .visao-card h3 {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
@@ -458,16 +547,13 @@
 <div class="container">
     <!-- Navegação -->
     <nav class="navbar">
-        <div class="logo">F-Tech Solutions<span style="color:#2563eb;">  </span></div>
+        <div class="logo">F-Tech Solutions</div>
         <ul class="nav-links">
-            <!-- Links removidos ou mantidos conforme necessário -->
-            <!--<li><a href="#home">Início</a></li>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#identidade">Quem Somos</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li> -->
+            <li><a href="#contato">Contato</a></li>
         </ul>
-        <div>
-           <!-- <a href="#contato" class="btn-primary" style="padding: 8px 22px;">Área do Cliente</a>
-        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -475,7 +561,7 @@
         <div class="hero">
             <div class="hero-content">
                 <h1>Transforme ideias em soluções digitais ou de hardware...</h1>
-                <p>Estratégia, design e tecnologia para impulsionar o seu negócio no ambiente fisico e digital. Criamos soluções e experiências personalizadas que geram resultados reais.</p>
+                <p>Estratégia, design e tecnologia para impulsionar o seu negócio no ambiente físico e digital. Criamos soluções e experiências personalizadas que geram resultados reais.</p>
                 <div class="hero-buttons">
                     <a href="#servicos" class="btn-primary">Nossos serviços</a>
                     <a href="#contato" class="btn-primary btn-outline">Fale com um expert</a>
@@ -483,6 +569,69 @@
             </div>
             <div class="hero-image">
                 <img src="imagens/a.png" alt="F-Tech Solutions">
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section id="identidade" class="section">
+        <h2 class="section-title">Nascemos para:</h2>
+        <p class="section-sub">Tornar seu sonho de sucesso em realidade através da tecnologia.</p>
+        
+        <!-- Missão e Visão lado a lado -->
+        <div class="missao-visao-container">
+            <div class="missao-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Missão</h3>
+                <p>Prover soluções integradas de tecnologia da informação com rigor técnico, agilidade e comprometimento — da manutenção e suporte à infraestrutura, software e segurança — gerando valor real e sustentável para nossos clientes, sejam eles pessoas, empresas privadas ou órgãos públicos.</p>
+            </div>
+            <div class="visao-card">
+                <i class="fas fa-eye"></i>
+                <h3>Visão</h3>
+                <p>Ser referência regional em tecnologia integrada, tornando-nos a parceira de tecnologia de maior confiança no norte de Minas, reconhecida pela excelência técnica, inovação contínua e pela capacidade de impulsionar o crescimento escalável dos nossos clientes nos setores privado, público e residenciais.</p>
+            </div>
+        </div>
+        
+        <!-- Valores -->
+        <div>
+            <div class="valores-header">
+                <div class="valores-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Nossos Valores</h3>
+                <p>Os princípios que guiam cada entrega</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Excelência Técnica</h3>
+                    <p>Rigor e qualidade em cada solução entregue, sem concessões.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Comprometimento</h3>
+                    <p>Responsabilidade total com prazos, resultados e pessoas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integridade</h3>
+                    <p>Transparência e ética em todas as relações comerciais e técnicas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Inovação Contínua</h3>
+                    <p>Atualização constante para oferecer o que há de melhor em TI.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-smile"></i>
+                    <h3>Foco no Cliente</h3>
+                    <p>O sucesso do cliente é o nosso principal indicador de resultado.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Integração</h3>
+                    <p>Soluções conectadas que funcionam como um ecossistema coeso.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -536,19 +685,9 @@
         <div class="stars">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p>"A F-Tec Solutions transformou completamente nossa empresa e presença online. Em apenas 3 meses, aumentamos nossa performance geral em 40% e o site ficou incrível! Equipe atenciosa e muito profissional."</p>
-        <h4>— Fabricio Matos, CEO da CF3W - Digital Solutions —</h4>
+        <p>"A F-Tech Solutions transformou completamente nossa empresa e presença online. Em apenas 3 meses, aumentamos nossa performance geral em 40% e o site ficou incrível! Equipe atenciosa e muito profissional."</p>
+        <h4>— Fabrício Matos, CEO da CF3W - Digital Solutions —</h4>
     </div>
-
-    <!-- Segundo Depoimento 
-    <div class="testimonial">
-        <i class="fas fa-quote-left"></i>
-        <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p>"A F-Tec Solutions transformou completamente nossa presença online. Em apenas 3 meses, aumentamos nossa performance geral em 40% e o site ficou incrível! Equipe atenciosa e muito profissional."</p>
-        <h4>— Fabricio Matos, CEO da CF3W</h4>
-    </div> -->
 
     <!-- Seção de Contato -->
     <section id="contato" class="section" style="padding-top: 20px;">
@@ -583,16 +722,16 @@
     <div class="cta">
         <h2>Pronto para decolar?</h2>
         <p>Agende uma conversa estratégica sem compromisso. Vamos mostrar na prática como potencializar seus resultados através da tecnologia.</p>
-        <a href="#" id="whatsappCTAButton" class="btn-primary" target="_blank"style="background: white; color:#0f172a;">Quero uma consultoria gratuita agora →</a>
+        <a href="#" id="whatsappCTAButton" class="btn-primary" target="_blank" style="background: white; color:#0f172a;">Quero uma consultoria gratuita agora →</a>
     </div>
 
     <!-- Rodapé -->
     <footer>
         <div class="footer-links">
-            <!-- <a href="#home">Início</a>
+            <a href="#home">Início</a>
+            <a href="#identidade">Quem Somos</a>
             <a href="#servicos">Serviços</a>
             <a href="#contato">Contato</a>
-            <a href="#">Blog</a> -->
             <a href="politica-privacidade.html">Política de Privacidade</a>
         </div>
         <div class="social-icons">
@@ -602,7 +741,7 @@
             <a href="#" class="social-twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-youtube" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
-        <p>&copy; 2026 F-Tech Solutions.<br>Todos os direitos reservados.</p>
+        <p>&copy; 2026 F-Tech Solutions. Todos os direitos reservados.</p>
         <p style="margin-top: 12px; font-size: 0.8rem;">Feito com <i class="fas fa-heart" style="color:#ef4444;"></i> para impulsionar negócios.</p>
     </footer>
 </div>
